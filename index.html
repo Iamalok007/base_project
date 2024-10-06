@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>User Management</title>
+  <script src="https://cdn.jsdelivr.net/npm/ethers@5.7.0/dist/ethers.umd.min.js"></script>
+  <script defer src="app.js"></script>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      margin: 20px;
+    }
+    .container {
+      width: 50%;
+      margin: auto;
+      padding: 20px;
+      background-color: #fff;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    input, button {
+      margin: 10px 0;
+      padding: 10px;
+      width: 100%;
+      font-size: 16px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>User Management System</h2>
+
+    <!-- Create User -->
+    <h3>Create a User</h3>
+    <input type="text" id="name" placeholder="Enter Name" />
+    <input type="email" id="email" placeholder="Enter Email" />
+    <input type="number" id="age" placeholder="Enter Age" />
+    <button onclick="createUser()">Create User</button>
+
+    <!-- Get User -->
+    <h3>Get User by ID</h3>
+    <input type="number" id="getUserId" placeholder="Enter User ID" />
+    <button onclick="getUser()">Get User</button>
+    <div id="userDetails"></div>
+
+    <!-- Update User -->
+    <h3>Update a User</h3>
+    <input type="number" id="updateUserId" placeholder="Enter User ID" />
+    <input type="text" id="updateName" placeholder="Enter New Name" />
+    <input type="email" id="updateEmail" placeholder="Enter New Email" />
+    <input type="number" id="updateAge" placeholder="Enter New Age" />
+    <button onclick="updateUser()">Update User</button>
+
+    <!-- Delete User -->
+    <h3>Delete User</h3>
+    <input type="number" id="deleteUserId" placeholder="Enter User ID" />
+    <button onclick="deleteUser()">Delete User</button>
+
+    <!-- Get Total Users -->
+    <h3>Total Users on Platform</h3>
+    <button onclick="getTotalUsers()">Get Total Users</button>
+    <div id="totalUsers"></div>
+  </div>
+</body>
+</html>
